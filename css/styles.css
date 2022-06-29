@@ -278,7 +278,7 @@ p{
 
 /* Exception added below for Smaller Screen Device */
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
     #title{
         text-align: center;
@@ -293,44 +293,4 @@ p{
         transform: scale(1.1);
     }
 
-}
-
-@media (max-width: 1200px) and (min-width:900px){
-    #title{
-        text-align: center;
-    }
-    #title .big-heading{
-        font-size: 2rem;
-    }
-    .title-image{
-        /* padding-top: 17%; */
-        position: absolute;
-        transform: rotate(0);
-        width: 50%;
-        right: 5%;
-    }
-    .title-image:hover {
-        transform: scale(1.1);
-    }
-}
-
-
-@media (max-width: 1400px) and (min-width:1200px){
-    #title{
-        text-align: left;
-    }
-
-    #title .big-heading{
-        font-size: 3rem;
-    }
-    .title-image{
-        /* padding-top: 15%; */
-        position: absolute;
-        /* transform: rotate(0); */
-        width: 50%;
-        right: 5%;
-    }
-    .title-image:hover {
-        transform: scale(1.1) rotate(25deg);
-    }
 }
