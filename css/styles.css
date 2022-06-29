@@ -1,0 +1,336 @@
+body{
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+    
+p{
+    color: grey;
+}
+
+.para-black{
+    color: black;
+}
+
+/* heading */
+
+.big-heading{
+    font-family: "Montserrat";
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    transition: 0.5s ease-in-out;
+}
+
+.cloud{
+    font-family: "ubuntu";
+    font-weight: bold;
+    font-size: 4rem;
+    /* transition: 0.5s ease-in-out; */
+    animation-name: cloudmove;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes cloudmove {
+    0% {color: white;
+        -webkit-text-stroke: 0.5px white;}
+    100% {
+        -webkit-text-stroke: 0.5px white;
+        color: black;}
+}
+
+/* .cloud:hover{
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px white;
+    color: black;
+} */
+
+.section-heading{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+
+/* Containers */
+
+.container-fluid{
+    padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section{
+    background-color: black;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 20px #000);
+}
+
+.white-section{
+    background-color: rgb(215, 215, 215);
+}
+
+/* Navigation Bar */
+
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: grey;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-link{
+    font-size: 1.3rem;
+}
+
+/* Download Buttons */
+
+.download-button{
+    margin: 5% 3% 5% 0;
+}
+
+/* Title */
+
+#title {
+    text-align: left;
+}
+
+
+#title .container-fluid{
+    padding: 3% 15% 7%;
+}
+
+/* Title Image */
+
+.title-image-div{
+    text-align: center;
+}
+
+
+
+.title-image{
+    /* padding-top: 5%; */
+    max-width: 50%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 5%;
+    transition: 0.6s ease-in-out;
+}
+
+.title-image:hover {
+    transform: scale(1.1) rotate(25deg);
+}
+
+
+/* features */
+
+/* #features {
+    position: relative;
+} */
+
+.feature-title{
+    font-size: 1.5rem;
+}
+
+.feature-box{
+    padding: 4.5%;
+}
+
+.icon{
+    color: black;
+    margin-bottom: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover{
+    color: grey;
+}
+
+/* Testimonials */
+
+
+.testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 15px 10px 10px 10px;
+}
+
+
+/* press */
+
+
+#press{
+    background-color: rgb(215, 215, 215);
+    padding-top: 7%;
+}
+
+.container{
+    background-color: white;
+    padding: 70px;
+    transition: 0.5s ease-in-out;
+    filter: drop-shadow(0px 0px 20px #000);
+}
+
+.toi{
+    width: 25%;
+}
+
+.ht{
+    width: 18%;
+}
+.press-image{
+    max-width: 50%;
+    margin: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.press-image:hover {
+    transform: scale(1.05);
+    filter: grayscale(100%);
+}
+
+/* pricing section  */
+
+#pricing{
+    padding: 100px;
+}
+
+.price-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.pricing-column{
+    padding: 3% 2%;
+}
+
+.pricing-name{
+    padding-top: 3.5%;
+}
+
+.card{
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+/* call to action */
+
+.brand {
+    font-family: "Ubuntu";
+    font-weight: bold;
+    color: black;
+    -webkit-text-stroke: 0.5px #ffffff;
+    font-size: 6rem;
+    transition: 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+.brand:hover {
+    -webkit-text-stroke: 0.5px #000000;
+    color: white;
+}
+
+
+
+.download-button2{
+    margin: 20px 10px 0 10px;
+}
+
+/* footer */
+
+#footer{
+    padding: 5% 15% 2% 15%;
+}
+
+.icon2{
+    margin: 0 15px 30px 15px;
+}
+
+
+/* Exception added below for Smaller Screen Device */
+
+@media (max-width: 900px) {
+
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        padding-top: 5%;
+        position: static;
+        transform: rotate(0);
+        max-width: 100%;
+    }
+    .title-image:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+@media (max-width: 1200px) and (min-width:900px){
+    #title{
+        text-align: center;
+    }
+    #title .big-heading{
+        font-size: 2rem;
+    }
+    .title-image{
+        /* padding-top: 17%; */
+        position: absolute;
+        transform: rotate(0);
+        width: 50%;
+        right: 5%;
+    }
+    .title-image:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+@media (max-width: 1400px) and (min-width:1200px){
+    #title{
+        text-align: left;
+    }
+
+    #title .big-heading{
+        font-size: 3rem;
+    }
+    .title-image{
+        /* padding-top: 15%; */
+        position: absolute;
+        /* transform: rotate(0); */
+        width: 50%;
+        right: 5%;
+    }
+    .title-image:hover {
+        transform: scale(1.1) rotate(25deg);
+    }
+}
