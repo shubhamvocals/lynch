@@ -27,8 +27,8 @@ p{
 }
 
 .cloud{
-    font-family: "ubuntu";
-    font-weight: bold;
+    /* font-family: "ubuntu";
+    font-weight: bold; */
     font-size: 4rem;
     /* transition: 0.5s ease-in-out; */
     animation-name: cloudmove;
@@ -45,11 +45,6 @@ p{
         color: black;}
 }
 
-/* .cloud:hover{
-    letter-spacing: 2px;
-    text-shadow: 0 0 3px white;
-    color: black;
-} */
 
 .section-heading{
     font-size: 3rem;
@@ -68,7 +63,7 @@ p{
 .colored-section{
     background-color: black;
     color: #ffffff;
-    filter: drop-shadow(0px 0px 20px #000);
+    filter: drop-shadow(0px 0px 15px #000);
 }
 
 .white-section{
@@ -79,12 +74,12 @@ p{
 
 
 .navbar {
-    padding: 0 0 4.5rem;
+    padding: 1.5% 15%;
 }
 
 .navbar-brand {
     font-family: "Ubuntu";
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     transition: 0.3s ease-in-out;
 }
@@ -104,7 +99,10 @@ p{
 /* Download Buttons */
 
 .download-button{
-    margin: 5% 3% 5% 0;
+    margin: 5% 0 5% 1%;
+    width: 50%;
+    font-weight: bold;
+    border-width: 3px;
 }
 
 /* Title */
@@ -115,7 +113,7 @@ p{
 
 
 #title .container-fluid{
-    padding: 3% 15% 7%;
+    padding: 5% 15% 7%;
 }
 
 /* Title Image */
@@ -128,15 +126,16 @@ p{
 
 .title-image{
     /* padding-top: 5%; */
-    max-width: 50%;
+    max-width: 45%;
     transform: rotate(25deg);
     position: absolute;
-    right: 5%;
+    right: 8%;
     transition: 0.6s ease-in-out;
+    
 }
 
 .title-image:hover {
-    transform: scale(1.1) rotate(25deg);
+    transform: scale(1.1) rotate(0);
 }
 
 
@@ -185,24 +184,16 @@ p{
 #press{
     background-color: rgb(215, 215, 215);
     padding-top: 7%;
+    padding-bottom: 10%;
 }
 
 .container{
     background-color: white;
     padding: 70px;
     transition: 0.5s ease-in-out;
-    filter: drop-shadow(0px 0px 20px #000);
-}
-
-.toi{
-    width: 25%;
-}
-
-.ht{
-    width: 18%;
 }
 .press-image{
-    max-width: 50%;
+    max-width: 25%;
     margin: 30px;
     transition: 0.5s ease-in-out;
 }
@@ -215,7 +206,7 @@ p{
 /* pricing section  */
 
 #pricing{
-    padding: 100px;
+    padding: 0 100px 100px 100px;
 }
 
 .price-text{
@@ -239,7 +230,7 @@ p{
 
 .card:hover{
     transform: scale(1.05);
-    filter: drop-shadow(0px 0px 10px #000);
+    filter: drop-shadow(0px 0px 2px #000);
 }
 
 /* call to action */
@@ -279,7 +270,6 @@ p{
 /* Exception added below for Smaller Screen Device */
 
 @media (max-width: 1200px) {
-
     #title{
         text-align: center;
     }
@@ -291,6 +281,9 @@ p{
     }
     .title-image:hover {
         transform: scale(1.1);
+    }
+    .download-button{
+        margin: 5% 0 5% 0;
     }
 
 }

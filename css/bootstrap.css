@@ -1,0 +1,52 @@
+
+/* Off canvas  */
+
+/* <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    ...
+  </div>
+</div> */
+
+
+/* Navbar scroll  */
+
+/* <nav id="navbar-example2" class="navbar bg-light px-3">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading1">First</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Second</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+  <h4 id="scrollspyHeading1">First heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading2">Second heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading3">Third heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading4">Fourth heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading5">Fifth heading</h4>
+  <p>...</p>
+</div> */
+
+
