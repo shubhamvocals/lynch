@@ -4,14 +4,14 @@ $(window).on("load",function(){
   
 $(document).ready(function(){ 
 
-    $(".signup-heading").text("The Best Of Cloud Gaming");          // for signup page
+    $(".signup-heading").text("Best Of Cloud Gaming");          // for signup page
     setTimeout(function(){
     $(".signup-heading").text("Just a Step Away!");
     },8000);
 
-    $(".login-heading").text("Log in your account");          // for login page
+    $(".login-heading").text("Login to Play");          // for login page
     setTimeout(function(){
-    $(".login-heading").text("Play your favourite games!");
+    $(".login-heading").text("Enjoy!");
     },8000);
 });
 
