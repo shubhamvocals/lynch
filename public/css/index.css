@@ -21,6 +21,7 @@ p{
     color: black;
 }
 
+
 /* heading */
 
 .big-heading{
@@ -394,10 +395,7 @@ p{
 
 /* Exception added below for Smaller Screen Device */
 
-@media (max-width: 1200px) {
-    html, body{
-        width: 100%;
-    }
+@media (max-width: 900px) {
     #title{
         text-align: center;
     }
