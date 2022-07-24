@@ -395,6 +395,9 @@ p{
 /* Exception added below for Smaller Screen Device */
 
 @media (max-width: 1200px) {
+    html, body{
+        width: 50%;
+    }
     #title{
         text-align: center;
     }
