@@ -1,0 +1,20 @@
+<%- include("header") -%>
+<!-- title and form -->
+<div class="title">
+    <h3 class="login-heading"></h3>
+</div>
+<main class="form-signin w-100 m-auto">
+    <form action="/" method="post">
+        <div class="form-floating">
+          <input type="email" name="email" class="form-control form-login block1" placeholder="Email">
+          <label>Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="password" class="form-control form-login block2" placeholder="Password">
+          <label>Password</label>
+        </div>
+        <button class="w-40 btn btn-outline-light signup login" type="submit">Login</button>
+        <p class="mt-5 mb-3">&copy; Lynch 2017-2022</p>
+    </form>
+</main>
+<%- include("footer") -%>

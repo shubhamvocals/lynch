@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>lynch</title>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/1c75132237.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body> 
+  <div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
+  <div>
+      <nav id="my-nav" class="navbar sticky-top navbar-expand-lg navbar-dark colored-section">
+        <a class="navbar-brand" href="/">lynch</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#cta">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>   
+      </nav>
+  
+    <div data-bs-spy="scroll" data-bs-target="my-nav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <section class="colored-section" id="title">
+        <div class="container-fluid">
+          <div class="row">   
+            <div class="col-lg-6">
+              <h1 class="big-heading">Play your favourite games with the best <div class="cloud big-heading">Cloud Gaming</div></h1>
+              <form action="/signup" method="get" style="display: inline;">
+                <button type="submit" class="btn btn-dark btn-lg download-button signup">Sign Up</button>
+              </form>
+              <form action="/login" method="get" style="display: inline;">
+                <button type="submit" class="btn btn-dark btn-lg download-button login">Login</button>
+              </form>
+            </div>
+            <div class="title-image-div col-lg-6">
+              <img class="title-image" src="images/iphone.png" alt="iphone-mockup">
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Features -->
+      
+      <section class="white-section" id="features">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-4 feature-box">
+              <!-- <i class="icon fa-solid fa-circle-check fa-4x"></i> -->
+              <i class="icon fa-solid fa-cloud fa-4x"></i>
+              <h3 class="feature-title">Hastle free Use.</h3>
+              <p class="para-black">So easy to use, login and play your game.</p>
+            </div>
+            <div class="col-lg-4 feature-box">
+              <i class="icon fa-solid fa-gamepad fa-4x"></i>
+              <h3 class="feature-title">Lots of Games</h3>
+              <p class="para-black">We have all the games, the best games.</p>
+            </div>
+            <div class="col-lg-4 feature-box">
+              <!-- <i class="icon fa-solid fa-heart fa-4x"></i> -->
+              <i class="icon fa-solid fa-indian-rupee-sign fa-4x"></i>
+              <h3 class="feature-title">Best Pricing.</h3>
+              <p class="para-black">Not satisfied? We pay your money back.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <!-- Testimonials -->
+
+      <section class="colored-section" id="testimonials">
+        
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active container-fluid">
+              <h2 class="testimonial-text">I have been searching for a game so long, finally found it here!</h2>
+              <img class="testimonial-image" src="images/image2.jpg" alt="dog-profile">
+              <em>Shubham, Mumbai</em>
+            </div>
+            <div class="carousel-item container-fluid">
+              <h2 class="testimonial-text">The app has huge collection of games to play, just loving it.</h2>
+              <img class="testimonial-image" src="images/image1.jpeg" alt="lady-profile">
+              <em>Smriti, Bangalore</em>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+      </section>
+
+
+      <!-- Press -->
+      
+      <section class="" id="press">
+        <div class="container shadow-lg">
+          <img class="press-image ie" src="images/indianexpress.png" alt="ie-logo">
+          <img class="press-image toi" src="images/timesofindia.png" alt="toi.png">
+          <img class="press-image ht" src="images/hindustantimes.png" alt="ht.png">
+          <img class="press-image th" src="images/thehindu.png" alt="th-logo">
+        </div>
+      </section>
+      
+
+      <!-- Pricing -->
+
+      <section class="white-section" id="pricing">
+
+        <h2 class="section-heading">You won't regret subscribing us.</h2>
+        <p class="para-black">Simple and affordable price plans that provides you access to the best games.</p>
+
+        <div class="row">
+
+          <div class="pricing-column col-lg-4 col-md-6">
+            <div class="card shadow-lg">
+              <div class="card-header rounded-0">
+                <h3 class="pricing-name text-light">Basic</h3>
+              </div>
+              <div class="card-body">
+                <h2 class="price-text">Free</h2>
+                <p>Access to 100 Games</p>
+                <p>1 hour Game Streaming</p>
+                <p>Personalized Ads</p>
+                <form action="/signup" method="get">
+                  <button class="btn btn-lg btn-block btn-outline-dark rounded-0" type="submit">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pricing-column col-lg-4 col-md-6">
+            <div class="card shadow-lg">
+              <div class="card-header rounded-0">
+                <h3 class="pricing-name text-light">Pro</h3>
+              </div>
+              <div class="card-body">
+                <h2 class="price-text">₹499 / mo</h2>
+                <p>Access to 1000 Games</p>
+                <p>8 Hours Game Streaming</p>
+                <p>No Ads</p>
+                <form action="/signup" method="get">
+                  <button class="btn btn-lg btn-block btn-dark rounded-0" type="submit">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-column col-lg-4">
+            <div class="card shadow-lg">
+              <div class="card-header rounded-0">
+                <h3 class="pricing-name text-light">Premium</h3>
+              </div>
+              <div class="card-body">
+                <h2 class="price-text">₹999 / mo</h2>
+                <p>Access to 5000+ Games</p>
+                <p>No limit on Game Streaming</p>
+                <p>No Ads</p>
+                <form action="/signup" method="get">
+                  <button class="btn btn-lg btn-block btn-dark rounded-0" type="submit">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Call to Action -->
+      
+      <section class="colored-section" id="cta">
+        <div class="container-fluid">
+          <h3 class="big-heading">Find the Game you need. Download our <span class="brand">lynch</span> app now.</h3>
+          <button type="button" class="btn btn-dark btn-lg download-button2"><i class="fa-brands fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-light btn-lg download-button2"><i class="fa-brands fa-google-play"></i> Download</button>
+        </div>
+      </section>
+      
+      <!-- Contact -->
+
+      <section class="colored-section" id="contact">
+        <div class="container-fluid dis">
+          <form action="mailto:yoyoshubhs@gmail.com">
+            <div class="row contactus">
+              <div class="contact-row">
+                <h3 class="w-100 text-center">Contact Us</h3>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Query"></textarea>
+                </div>
+                <div class="mb-3">
+                  <h3 class="letter">Click the Letter to Post!</h3>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <button style="background-color: black; padding: 0;"><img class="mail-image" src="images/mail.gif" alt="mail.gif"></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+
+      <footer class="white-section" id="footer">
+        <div class="">
+          <i class="icon2 fa-brands fa-twitter fa-2x"></i>
+          <i class="icon2 fa-brands fa-facebook-f fa-2x"></i>
+          <i class="icon2 fa-brands fa-instagram fa-2x"></i>
+          <i class="icon2 fa-solid fa-envelope fa-2x"></i>
+          <p class="para-black">© Copyright 2022 Lynch</p>
+        </div>
+      </footer>
+    </div>
+  </div>   
+  
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+body{
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+    
+p{
+    color: grey;
+}
+
+.para-black{
+    color: black;
+}
+
+/* heading */
+
+.big-heading{
+    font-family: "Montserrat";
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    transition: 0.5s ease-in-out;
+}
+
+.cloud{
+    font-size: 3.5rem;
+    /* animation: cloudmove 6s infinite alternate; */
+}
+
+@keyframes cloudmove {
+    0% {color: white;
+        -webkit-text-stroke: 0.5px white;}
+    100% {
+        -webkit-text-stroke: 0.5px white;
+        color: black;}
+}
+
+
+.section-heading{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+
+/* Containers */
+
+.container-fluid{
+    padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section{
+    background-color: black;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 15px #000);
+}
+
+.white-section{
+    background-color: rgb(215, 215, 215);
+}
+
+/* Navigation Bar */
+
+
+.navbar {
+    padding: 1% 15%;
+    z-index: 3;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 3rem;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: grey;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-link{
+    font-size: 1.3rem;
+}
+
+/* Download Buttons */
+
+.download-button{
+    margin: 5% 0% 5% 0%;
+    width: 35%;
+    font-weight: bold;
+    border-width: 3px;
+    border-radius: 0;
+    background-color: black;
+}
+
+.download-button:hover{
+    border-color: white;
+}
+
+.login{
+    margin-left: 2%;
+}
+
+/* Title */
+
+#title {
+    text-align: left;
+}
+
+
+#title .container-fluid{
+    padding: 5% 15% 7%;
+}
+
+/* Title Image */
+
+.title-image-div{
+    text-align: center;
+}
+
+
+
+.title-image{
+    /* padding-top: 5%; */
+    max-width: 45%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 8%;
+    transition: 0.6s ease-in-out;
+    
+}
+
+.title-image:hover {
+    transform: scale(1.1) rotate(0);
+}
+
+
+/* features */
+
+/* #features {
+    position: relative;
+} */
+
+.feature-title{
+    font-size: 1.5rem;
+}
+
+.feature-box{
+    padding: 4.5%;
+}
+
+.icon{
+    color: black;
+    margin-bottom: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover{
+    color: grey;
+}
+
+/* Testimonials */
+
+
+.testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 15px 10px 10px 10px;
+}
+
+
+/* press */
+
+
+#press{
+    background-color: rgb(215, 215, 215);
+    padding: 10% 10%;
+}
+
+.container{
+    background-color: white;
+    transition: 0.5s ease-in-out;
+}
+.press-image{
+    max-width: 40%;
+    margin: 30px;
+    transition: 0.5s ease-in-out;
+    padding: 2%;
+}
+
+.th{
+    max-width: 30%;
+}
+
+.press-image:hover {
+    filter: grayscale(100%);
+}
+
+/* pricing section  */
+
+#pricing{
+    padding: 0 100px 100px 100px;
+}
+
+.price-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.pricing-column{
+    padding: 3% 2%;
+}
+
+.pricing-name{
+    padding-top: 3.5%;
+}
+
+.card{
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    transition: 0.3s ease-in-out;
+    border-radius: 0;
+}
+
+.card-header{
+    border: 0;
+    background-color: black;
+}
+
+
+.card:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 2px #000);
+}
+.card-body:hover > form > button{
+    background-color: #000;
+    color: white;
+}
+
+
+/* Contact */
+
+#contact{
+    text-align: left;
+}
+
+.contactus{
+    border: white;
+    border-width: 2px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-row{
+    padding-bottom: 2%;
+    margin: 0 0 5% 0;
+    border-bottom: 2px solid white;
+}
+
+.letter{
+    font-family: "Source Code Pro";
+    font-weight: 900;
+}
+
+.dis{
+    padding-top: 20px;
+}
+
+
+.mail-image{
+    width: 83%;
+    margin-top: -6%;
+}
+
+.form-control{
+    transition: 0.3s ease-in-out;
+    background-color: #000000;
+    font-weight: 300;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+.form-control[placeholder]{
+    color: white;
+}
+
+.form-control::placeholder{
+    color: white;
+}
+
+.form-control:focus{
+    background-color: black;
+    border: white;
+    border-style: solid;
+    box-shadow: none;
+    border-width: 2px;
+}
+
+/* call to action */
+
+.brand {
+    font-family: "Ubuntu";
+    font-weight: 900;
+    color: grey;
+    font-size: 4rem;
+    transition: 0.3s ease-in-out;
+}
+
+
+.download-button2{
+    margin: 20px 10px 0 10px;
+    border-radius: 0;
+}
+
+/* footer */
+
+#footer{
+    padding: 5% 15% 2% 15%;
+}
+
+.icon2{
+    margin: 0 15px 30px 15px;
+}
+
+
+/* loader */
+
+.loader-wrapper {
+    background-color: black;
+    position: absolute;
+    z-index: 4;
+    height: auto;
+    width: 100%;
+    align-items: center;
+  }
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    top: 50%;
+    position: fixed;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(180deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(360deg);}
+    100% {transform: rotate(360deg);}
+  }
+  
+@keyframes loader-inner {
+    0% {height: 0%;}
+    25% {height: 0%;}
+    50% {height: 100%;}
+    75% {height: 100%;}
+    100% {height: 0%;}
+  }
+
+
+/* Exception added below for Smaller Screen Device */
+
+@media (max-width: 1200px) {
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        padding-top: 5%;
+        position: static;
+        transform: rotate(0);
+        max-width: 100%;
+    }
+    .title-image:hover {
+        transform: scale(1.1);
+    }
+    .download-button{
+        margin: 5% 1% 5% 1%;
+    }
+    #contact{
+        text-align: center;
+    }
+    .mail-image{
+        padding-top: 10%;
+        max-width: 50%;
+    }
+}

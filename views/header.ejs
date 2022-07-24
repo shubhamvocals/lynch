@@ -1,0 +1,207 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>SignUp | Lynch</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1c75132237.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    
+    <!-- Custom styles for this template -->
+    <link href="/css/signup-login.css" rel="stylesheet">
+  
+  </head>
+  
+  
+  <body class="text-center">
+
+    <!-- loader  -->
+    <div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
+
+    <!-- navbar  -->
+    <nav id="my-nav" class="navbar sticky-top navbar-expand-lg navbar-dark colored-section">
+      <a class="navbar-brand" href="/">lynch</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#featuresmodal">Features</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#pricingmodal">Pricing</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#downloadmodal">Download</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#contactmodal">Contact</a>
+          </li>
+        </ul>
+      </div>   
+    </nav>
+
+    <!-- Contact Modal  -->
+    <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="ContactLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content contact-content">
+              <div class="modal-header contact-header">
+                <h5 class="w-100 modal-title contact-title text-center" id="ContactLabel">Mail Us</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+              </div>
+              <form action="mailto:yoyoshubhs@gmail.com">
+                <div class="modal-body contact-body">
+                  <div class="">
+                      <div class="mb-3">
+                        <input type="name" class="form-control form2" id="exampleFormControlInput1" placeholder="Name">
+                      </div>
+                      <div class="mb-3">
+                        <input type="email" class="form-control form2" id="exampleFormControlInput2" placeholder="Email">
+                      </div>
+                      <div class="mb-3">
+                        <textarea class="form-control form2" id="exampleFormControlTextarea1" rows="1" placeholder="Query"></textarea>
+                      </div>
+                  </div>
+                  <div class="mail-close-div">
+                    <button type="submit" class="btn btn-outline-light mail-close">Send</button>
+                    <button type="button" class="btn btn-outline-light mail-close" data-bs-dismiss="modal">Exit</button> 
+                  </div>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div class="modal fade" id="downloadmodal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content download-content">
+          <div class="modal-body download-body">
+            <div class="row">
+              <div class="col-lg-8">
+                <h1>Play your favorite games by downloading our app.</h1>
+                <button class="btn btn-outline-light download-button"><i class="fa-brands fa-apple"></i> Download</button>
+                <button class="btn btn-outline-light download-button"><i class="fa-brands fa-google-play"></i> Download</button>
+              </div>
+              <div class="col-lg-4">
+                <img class="mobile-image" src="images/iphone.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Modal-->
+
+    <div class="modal fade" id="pricingmodal" tabindex="-1" aria-labelledby="PricingLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content pricing-content">
+          <div class="modal-header pricing-header">
+            <h5 class="w-100 modal-title pricing-title text-center" id="PricingLabel">Pricing ~ ₹</h5>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body pricing-body">
+
+            <div class="row">
+
+              <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="pricing-name">Basic</h3>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="price-text">Free</h2>
+                    <p>Access to 100 Games</p>
+                    <p>1 hour Game Streaming</p>
+                    <p>Personalized Ads</p>
+                    <form action="/sign-up" method="get">
+                      <button class="btn btn-block btn-dark rounded-0" type="submit">Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="pricing-name">Pro</h3>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="price-text">₹499 / mo</h2>
+                    <p>Access to 1000 Games</p>
+                    <p>8 Hours Game Streaming</p>
+                    <p>No Ads</p>
+                    <form action="/sign-up" method="get">
+                      <button class="btn btn-block btn-dark rounded-0" type="submit">Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="pricing-column col-lg-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="pricing-name">Premium</h3>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="price-text">₹999 / mo</h2>
+                    <p>Access to 5000+ Games</p>
+                    <p>No limit on Game Streaming</p>
+                    <p>No Ads</p>
+                    <form action="/sign-up" method="get">
+                      <button class="btn btn-block btn-dark rounded-0" type="submit">Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Modal -->
+    <div class="modal fade" id="featuresmodal" tabindex="-1" aria-labelledby="FeaturesLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content features-content">
+          <div class="modal-body features-body">
+            <div class="row">
+              <div class="col-lg-4 f-box">
+                <i class="icon fa-solid fa-cloud fa-2x"></i>
+                <h2 class="f-title">Hastle free Use.</h2>
+                <p class="para-black">So easy to use, login and play your game.</p>
+              </div>
+              <div class="col-lg-4 f-box">
+                <i class="icon fa-solid fa-gamepad fa-2x"></i>
+                <h2 class="f-title">Lots of Games</h2>
+                <p class="para-black">We have all the games, the best games.</p>
+              </div>
+              <div class="col-lg-4 f-box">
+                <i class="icon fa-solid fa-indian-rupee-sign fa-2x"></i>
+                <h2 class="f-title">Best Pricing.</h2>
+                <p class="para-black">Not satisfied? We pay your money back.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

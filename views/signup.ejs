@@ -1,0 +1,28 @@
+<%- include("header") -%>
+<!-- title and form -->
+<div class="title">
+    <h3 class="signup-heading"></h3>
+</div>
+<main class="form-signin w-100 m-auto">
+    <form action="/status" method="post">
+        <div class="form-floating">
+          <input type="text" name="firstName" class="form-control form-signup block1" placeholder="First Name" required>
+          <label>First Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" name="lastName" class="form-control form-signup block2" placeholder="Last Name">
+          <label>Last Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" name="email" class="form-control form-signup block3" placeholder="Email" required>
+          <label>Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="password" class="form-control form-signup block4" placeholder="Password" required>
+          <label>Password</label>
+        </div>
+        <button class="w-40 btn btn-outline-light signup" type="submit">Sign Up</button>
+        <p class="mt-5 mb-3">&copy; Lynch 2017-2022</p>
+    </form>
+</main>
+<%- include("footer") -%>
