@@ -396,7 +396,7 @@ p{
 
 @media (max-width: 1200px) {
     html, body{
-        width: 50%;
+        width: auto;
     }
     #title{
         text-align: center;
