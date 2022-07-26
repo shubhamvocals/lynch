@@ -1,7 +1,12 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const encrypt = require("mongoose-encryption");
 const { default: mongoose } = require("mongoose");
+
 const app = express();
+
+// console.log(process.env.API_KEY);
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -9,14 +14,16 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://admin-shubham:test123@cluster0.99q5p.mongodb.net/lynch")
 
-const userSchema = {
+const userSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     email: String,
     password: String
-}
+});
 
-const User = mongoose.model("User", userSchema);
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ["password"]});
+
+const User = new mongoose.model("User", userSchema);
 
 app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
@@ -30,11 +37,23 @@ app.get("/login", function(req, res){
     res.render("login");
 });
 
+app.post("/login", function(req, res){
+    User.findOne({email: req.body.email}, function(err, foundUser){
+        if(foundUser){
+            if(foundUser.password === req.body.password){
+                res.sendFile(__dirname + "/index.html");
+            }else{
+                res.sendFile(__dirname + "/failure.html");
+            }
+        }
+    })
+})
+
+
 app.post("/status", function(req, res){
-    
     User.findOne({email: req.body.email}, function(err, foundUser){
         if(!err){
-            if(foundUser === null){
+            if(!foundUser){
                 const user = new User ({
                     firstName: req.body.firstName,
                     lastName: req.body.lastName,
