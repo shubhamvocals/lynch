@@ -1,12 +1,13 @@
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
-const encrypt = require("mongoose-encryption");
-const { default: mongoose } = require("mongoose");
+const mongoose = require("mongoose");
+const ejs = require("ejs");
+const md5 = require("md5");
+
 
 const app = express();
 
-// console.log(process.env.API_KEY);
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,8 +21,6 @@ const userSchema = new mongoose.Schema({
     email: String,
     password: String
 });
-
-userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ["password"]});
 
 const User = new mongoose.model("User", userSchema);
 
@@ -40,7 +39,7 @@ app.get("/login", function(req, res){
 app.post("/login", function(req, res){
     User.findOne({email: req.body.email}, function(err, foundUser){
         if(foundUser){
-            if(foundUser.password === req.body.password){
+            if(foundUser.password === md5(req.body.password)){
                 res.sendFile(__dirname + "/index.html");
             }else{
                 res.sendFile(__dirname + "/failure.html");
@@ -58,7 +57,7 @@ app.post("/status", function(req, res){
                     firstName: req.body.firstName,
                     lastName: req.body.lastName,
                     email: req.body.email,
-                    password: req.body.password
+                    password: md5(req.body.password)
                 });
                 user.save().then(res.sendFile(__dirname + "/success.html"));
             }else{
