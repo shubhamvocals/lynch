@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Lynch</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1c75132237.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    
+    <!-- Custom styles for this template -->
+    <link href="/css/signup-login.css" rel="stylesheet">
+  
+  </head>
+  
+  
+  <body class="text-center">
+    
+    <div class="ripple"></div>
+    <!-- loader  -->
+    <div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
+
+    <!-- navbar  -->
+    <nav id="my-nav" class="navbar sticky-top navbar-expand-lg navbar-dark colored-section">
+      <a class="navbar-brand" href="/">lynch</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#usermodal"><%=userFullName%></a>
+          </li>
+        </ul>
+      </div>   
+    </nav>
+    <div class="modal fade" id="usermodal" tabindex="-1" aria-labelledby="UserLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content user-content">
+                <div class="modal-header user-header">
+                  <h5 class="w-100 modal-title user-title text-center" id="UserLabel">Profile Details</h5>
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <form action="mailto:yoyoshubhs@gmail.com">
+                  <div class="modal-body user-body">
+                    <div class="form-signin w-100 m-auto">
+                        <form action="" id="update-form">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control form3" placeholder="First Name" value="<%=userFirstName%>">
+                              <label>First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control form3" placeholder="Last Name" value="<%=userLastName%>">
+                              <label>Last Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="email" class="form-control form3" placeholder="Email" value="<%=userEmail%>">
+                              <label>Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="password" class="form-control form3" placeholder="Password" value="demo">
+                              <label>Password</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mail-close-div">
+                      <form action="/logout" method="post" id="logout-form"></form>
+                      <button type="submit" form="update-form" class="btn btn-outline-light mail-close">Update</button>
+                      <button type="button" class="btn btn-outline-light mail-close" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" form="logout-form" class="btn btn-outline-light mail-close"><i class="fa-solid fa-power-off"></i></button>
+                      
+                    </div>
+                  </div>
+                  <div class="modal-footer user-footer">
+                    <i class="fa-solid fa-xmark fa-2x close w-100" data-bs-dismiss="modal"></i>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    
+<%- include("footer") %>

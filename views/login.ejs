@@ -4,17 +4,18 @@
     <h3 class="login-heading"></h3>
 </div>
 <main class="form-signin w-100 m-auto">
-    <form action="/login" method="post">
+    <form action="/login" method="post" id="login-form">
         <div class="form-floating">
-          <input type="email" name="email" class="form-control form-login block1" placeholder="Email">
+          <input type="email" name="email" class="form-control form-login block1" placeholder="Email" required>
           <label>Email</label>
         </div>
         <div class="form-floating">
-          <input type="password" name="password" class="form-control form-login block2" placeholder="Password">
+          <input type="password" name="password" class="form-control form-login block2" placeholder="Password" required>
           <label>Password</label>
         </div>
-        <button class="w-40 btn btn-outline-light signup login" type="submit">Login</button>
-        <p class="mt-5 mb-3">&copy; Lynch 2017-2022</p>
     </form>
+    <button class="w-40 btn btn-outline-light signup login" form="login-form" type="submit">Login</button>
+    <a href="/auth/google"><button class="w-40 btn btn-outline-light signup-google"><i class="fa-brands fa-google"></i></button></a>
+    <p class="mt-5 mb-3">&copy; Lynch 2017-2022</p>
 </main>
 <%- include("footer") -%>

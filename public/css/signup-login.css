@@ -13,10 +13,12 @@ body {
 .close{
   transition: 0.3s ease;
   margin: 0 45%;
+  transition: 0.1s ease;
 }
 
 .close:active{
-  animation: bounce 0.5s 1 alternate;
+  transform: scale(0.7);
+  /* animation: bounce 0.5s 1 alternate; */
 }
 
 @keyframes bounce{
@@ -49,7 +51,7 @@ body {
   animation-iteration-count: 3;
 }
 
-.contact-title, .pricing-title{
+.contact-title, .pricing-title, .user-title{
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 2rem;
@@ -117,6 +119,64 @@ textarea{
   resize: none;
 }
 
+/* User Modal */
+
+.user-content{
+  background-color: black;
+  border-radius: 0px;
+  color: white;
+  padding: 5% 3%;
+  border: 0;
+}
+
+.user-header{
+  border: 0;
+}
+
+.user-body{
+  border: 0;
+  padding: 3% 10%;
+}
+
+.user-footer{
+  border: 0;
+}
+
+/* form 3 */
+.form3{
+  background-color: #000000;
+  font-weight: 300;
+  border: 0;
+  border-radius: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.form3[placeholder]{
+  color: white;
+  font-weight: bold;
+}
+
+.form3:focus{
+  background-color: black;
+  box-shadow: 0 0 2px white;
+}
+
+.mail-close-div{
+  text-align: center;
+}
+
+.mail-close{
+  font-family: "Montserrat";
+  font-weight: 700;
+  border-width: 2px;
+  border-radius: 0;
+  margin: 0 1%;
+}
+
+textarea{
+  resize: none;
+}
+
 /* Download Modal */
 
 .mobile-image{
@@ -127,6 +187,7 @@ textarea{
   border-radius: 0px;
   color: white;
   padding: 5% 3%;
+  border: 0;
 }
 
 .download-body{
@@ -273,13 +334,19 @@ p{
   color: white;
 }
 
-.signup, .login{
+.signup, .login, .signup-google{
   font-family: "Montserrat";
+  font-weight: 700;
   margin-top: 7%;
   margin-bottom: -7%;
-  font-weight: 700;
   border-width: 2px;
   border-radius: 0px;
+  transition: 0.3s ease;
+}
+
+.signup:active, .login:active, .signup-google:active{
+  transition: 0.1s ease-in-out;
+  transform: scale(0.8);
 }
 
 
@@ -369,4 +436,31 @@ p{
   50% {height: 100%;}
   75% {height: 100%;}
   100% {height: 0%;}
+}
+
+.ripple {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transform: scale(0);
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 5;
+}
+
+
+/*Animate Function*/
+.animate {
+  animation: ripple-mo 1s cubic-bezier(0, 0, 0.2, 1);
+}
+@keyframes ripple-mo {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
 }
