@@ -30,8 +30,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-// mongoose.connect(process.env.MONGO_ID);
-mongoose.connect("mongodb://localhost:27017/lynch");
+mongoose.connect(process.env.MONGO_ID);
+// mongoose.connect("mongodb://localhost:27017/lynch");
 
 
 const userSchema = new mongoose.Schema({
@@ -61,8 +61,8 @@ passport.serializeUser(function(user, done) {
 passport.use(new GoogleStrategy({                       // Google Strategy
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/secrets"
-    // callbackURL: "http://radiant-island-56857.herokuapp.com/auth/google/secrets"
+    // callbackURL: "http://localhost:3000/auth/google/secrets"
+    callbackURL: "http://radiant-island-56857.herokuapp.com/auth/google/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ googleId: profile.id, firstName: profile.name.givenName, lastName: profile.name.familyName }, function (err, user) {
