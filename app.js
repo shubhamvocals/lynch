@@ -61,7 +61,7 @@ passport.serializeUser(function(user, done) {
 passport.use(new GoogleStrategy({                       // Google Strategy
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/secrets"
+    callbackURL: "https://localhost:3000/auth/google/secrets"
     // callbackURL: "http://radiant-island-56857.herokuapp.com/auth/google/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
