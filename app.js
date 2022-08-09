@@ -30,8 +30,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect(process.env.MONGO_ID);
-// mongoose.connect("mongodb://localhost:27017/lynch");
+// mongoose.connect(process.env.MONGO_ID);
+mongoose.connect("mongodb://localhost:27017/lynch");
 
 
 const userSchema = new mongoose.Schema({
