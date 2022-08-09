@@ -11,7 +11,6 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 
-
 const app = express();
 
 
@@ -31,7 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-// mongoose.connect("mongodb+srv://admin-shubham:test123@cluster0.99q5p.mongodb.net/lynch");
+// mongoose.connect(process.env.MONGO_ID);
 mongoose.connect("mongodb://localhost:27017/lynch");
 
 
@@ -72,15 +71,15 @@ passport.use(new GoogleStrategy({                       // Google Strategy
 ));
 
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/index.html");
+    res.render("index", {fontAwesomeID: process.env.FONTAWESOME_ID});
 });
 
 app.get("/signup", function(req, res){
-    res.render("signup");
+    res.render("signup", {fontAwesomeID: process.env.FONTAWESOME_ID});
 });
 
 app.get("/login", function(req, res){
-    res.render("login");
+    res.render("login", {fontAwesomeID: process.env.FONTAWESOME_ID});
 });
 
 app.get("/auth/google", passport.authenticate('google', { scope: ["profile"] } ));
@@ -133,15 +132,15 @@ app.get("/secrets", function(req, res){
     if(req.isAuthenticated()){
         if(req.user.email){
             if(req.user.lastName)
-                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: req.user.email});
+                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: req.user.email, fontAwesomeID: process.env.FONTAWESOME_ID});
             else
-                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: req.user.email});
+                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: req.user.email, fontAwesomeID: process.env.FONTAWESOME_ID});
         }
         else{
             if(req.user.lastName)
-                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: ""});
+                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: "", fontAwesomeID: process.env.FONTAWESOME_ID});
             else
-                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: ""});
+                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: "", fontAwesomeID: process.env.FONTAWESOME_ID});
         }   
     }else{
         res.redirect("/login");
