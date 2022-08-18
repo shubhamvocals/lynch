@@ -13,7 +13,6 @@ const findOrCreate = require("mongoose-findorcreate");
 
 const app = express();
 
-
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -30,8 +29,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect(process.env.MONGO_ID);
-// mongoose.connect("mongodb://localhost:27017/lynch");
+// mongoose.connect(process.env.MONGO_ID);
+mongoose.connect("mongodb://localhost:27017/lynch");
 
 
 const userSchema = new mongoose.Schema({
@@ -39,7 +38,8 @@ const userSchema = new mongoose.Schema({
     lastName: String,
     email: String,
     password: String,
-    googleId: String
+    googleId: String,
+    highscore: String
 });
 
 
@@ -61,11 +61,12 @@ passport.serializeUser(function(user, done) {
 passport.use(new GoogleStrategy({                       // Google Strategy
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    // callbackURL: "https://localhost:3000/auth/google/secrets"
-    callbackURL: "https://radiant-island-56857.herokuapp.com/auth/google/secrets"
+    callbackURL: "http://localhost:3000/auth/google/secrets"
+    // callbackURL: "https://radiant-island-56857.herokuapp.com/auth/google/secrets"
+    // userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ googleId: profile.id, firstName: profile.name.givenName, lastName: profile.name.familyName }, function (err, user) {
+    User.findOrCreate({ googleId: profile.id, firstName: profile.name.givenName, lastName: profile.name.familyName}, function (err, user) {
       return cb(err, user);
     });
   }
@@ -114,7 +115,8 @@ app.post("/status", function(req, res){
     const user = new User ({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        email: req.body.email
+        email: req.body.email,
+        highscore: "0"
     });
     User.register(user, req.body.password, function(err, user){
         if(err){
@@ -133,19 +135,27 @@ app.get("/secrets", function(req, res){
     if(req.isAuthenticated()){
         if(req.user.email){
             if(req.user.lastName)
-                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: req.user.email, fontAwesomeID: process.env.FONTAWESOME_ID});
+                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: req.user.email, highscore: req.user.highscore, fontAwesomeID: process.env.FONTAWESOME_ID});
             else
-                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: req.user.email, fontAwesomeID: process.env.FONTAWESOME_ID});
+                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: req.user.email, highscore: req.user.highscore, fontAwesomeID: process.env.FONTAWESOME_ID});
         }
         else{
             if(req.user.lastName)
-                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: "", fontAwesomeID: process.env.FONTAWESOME_ID});
+                res.render("startpage", {userFullName: (req.user.firstName + " " + req.user.lastName), userFirstName: req.user.firstName, userLastName: req.user.lastName, userEmail: "", userGoogleId: req.user.googleId, highscore: req.user.highscore, fontAwesomeID: process.env.FONTAWESOME_ID});
             else
-                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: "", fontAwesomeID: process.env.FONTAWESOME_ID});
-        }   
+                res.render("startpage", {userFullName: req.user.firstName, userFirstName: req.user.firstName, userLastName: "", userEmail: "", userGoogleId: req.user.googleId, highscore: req.user.highscore, fontAwesomeID: process.env.FONTAWESOME_ID});
+        }
     }else{
         res.redirect("/login");
     }
+});
+
+app.post("/update", function(req, res){
+    User.findOneAndUpdate({$or:[{googleId: req.body.googleId}, {email: req.body.email}]}, {highscore: req.body.hiddenHighscore}, function(err){
+        if(err){
+            console.log(err);
+        }
+    });
 });
 
 

@@ -1,0 +1,73 @@
+body {
+  text-align: center;
+  background-color: black;
+  height: auto;
+}
+
+.heading{
+  margin: 0 10%;
+}
+
+#game-name{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin-top:  3%;
+  margin-bottom: 1%;
+  color: White;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  margin:  2%;
+  color: white;
+}
+
+p{
+  font-family: 'Source Code Pro';
+  font-size: 1rem;
+  margin-bottom:  3%;
+  margin-top: 0;
+  color: white;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.btn {
+  margin: 2%;
+  display: inline-block;
+  height: 85px;
+  width: 85px;
+  border: 2px solid white;
+  border-radius: 0;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: black;
+}
+
+.green {
+  background-color: black;
+}
+
+.blue {
+  background-color: black;
+}
+
+.yellow {
+  background-color: black;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}

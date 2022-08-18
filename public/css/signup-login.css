@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: auto;
 }
 
 body {
@@ -8,6 +8,7 @@ body {
   padding-bottom: 40px;
   background-color: black;
   font-family: "Montserrat";
+  text-align: center;
 }
 
 .close{
@@ -463,4 +464,79 @@ p{
     transform: scale(5);
     opacity: 0;
   }
+}
+
+/* Game  */
+
+.heading{
+  margin: 0 10%;
+}
+
+#highscore{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin-top:  3%;
+  margin-bottom: 1%;
+  color: White;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  margin:  2%;
+  color: white;
+}
+
+p{
+  font-family: 'Source Code Pro';
+  font-size: 1rem;
+  margin: 3% 8% 3% 8%;
+  color: white;
+}
+
+.container {
+  display: block;
+  width: 14.32%; 
+}
+
+.game-btn {
+  margin: 2%;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 0;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: black;
+}
+
+.green {
+  background-color: black;
+}
+
+.blue {
+  background-color: black;
+}
+
+.yellow {
+  background-color: black;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+/* Very Important */
+
+.user-detail{
+  display: none;
+  visibility: hidden;
 }

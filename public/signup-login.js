@@ -2,8 +2,7 @@ $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
 });
   
-$(document).ready(function(){ 
-
+$(document).ready(function(){
     $(".signup-heading").text("Best Of Cloud Gaming");          // for signup page
     setTimeout(function(){
     $(".signup-heading").text("Just a Step Away!");
@@ -35,16 +34,16 @@ $("textarea").each(function () {
 });
 
 //Ripple Event Handler
-var drawRipple = function(ev) {
-    var x = ev.clientX;
-    var y = ev.clientY;
-    var node = document.querySelector(".ripple");
-    var newNode = node.cloneNode(true);
-    newNode.classList.add("animate");
-    newNode.style.left = ev.clientX - 5 + "px";
-    newNode.style.top = ev.clientY - 5 + "px";
-    node.parentNode.replaceChild(newNode, node);
-};
+// var drawRipple = function(ev) {
+//     var x = ev.clientX;
+//     var y = ev.clientY;
+//     var node = document.querySelector(".ripple");
+//     var newNode = node.cloneNode(true);
+//     newNode.classList.add("animate");
+//     newNode.style.left = ev.clientX - 5 + "px";
+//     newNode.style.top = ev.clientY - 5 + "px";
+//     node.parentNode.replaceChild(newNode, node);
+// };
   
 //Ripple Triggers
-window.addEventListener("click", drawRipple);
+// window.addEventListener("click", drawRipple);
