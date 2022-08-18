@@ -1,1 +1,1 @@
-Lynch is a web-application containing a signup page in order to login to a game. The web-app tracks user data and stores it in a database. User can login, play the game and the highscore is automatically saved.
+Lynch is a web-application containing a signup page in order to access a game. The web-app tracks user data and stores it in a database. User can login, play the game and the highscore is automatically saved.
