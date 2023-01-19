@@ -62,7 +62,7 @@ passport.use(new GoogleStrategy({                       // Google Strategy
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     // callbackURL: "http://localhost:3000/auth/google/secrets"
-    callbackURL: "https://radiant-island-56857.herokuapp.com/auth/google/secrets"
+    callbackURL: "https://lynch.onrender.com/auth/google/secrets"
     // userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
